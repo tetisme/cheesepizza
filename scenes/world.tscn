@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cas0n1x6n0tgy"]
+
+[ext_resource type="PackedScene" uid="uid://cqvx7vkmkye8j" path="res://scenes/tests/cube.tscn" id="1_nnsk1"]
+
+[node name="World" type="Node3D" unique_id=698511814]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1366747129]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 4
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1540568338]
+handle_input_locally = false
+size = Vector2i(288, 162)
+render_target_update_mode = 4
+
+[node name="Cube" parent="SubViewportContainer/SubViewport" unique_id=2100450649 instance=ExtResource("1_nnsk1")]
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=1000797944]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 2, 1, 3)

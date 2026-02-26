@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cqvx7vkmkye8j"]
+
+[ext_resource type="ArrayMesh" uid="uid://bhlhjdtd4fobl" path="res://assets/32x Cube/32.obj" id="1_ijxps"]
+[ext_resource type="Texture2D" uid="uid://1tax4p67vob0" path="res://assets/32x Cube/32.png" id="2_1u5a1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c8e5g"]
+albedo_texture = ExtResource("2_1u5a1")
+
+[node name="Cube" type="Node3D" unique_id=2100450649]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1723911779]
+mesh = ExtResource("1_ijxps")
+surface_material_override/0 = SubResource("StandardMaterial3D_c8e5g")
